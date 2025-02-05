@@ -53,7 +53,7 @@ class Character:
                 self.isResting = False
             
             else:
-                print("\nERROR in line 56\n")
+                print("\nError on line 56\n")
             
             if self.gender == "Male":
                 if self.isWorking == True:
@@ -71,7 +71,7 @@ class Character:
                     self.grades -= 0.25
                 
                 else:
-                    print("\nERROR in line 74\n")
+                    print("\nError on line 74\n")
             
             if self.gender == "Female":
                 if self.isWorking == True:
@@ -89,12 +89,12 @@ class Character:
                     self.grades -= 0.25
                 
                 else:
-                    print("\nERROR in line 92\n")
+                    print("\nError on line 92\n")
             
             if self.happy > 100:
                 self.happy = 100
             
-            tm.sleep(1)
+            tm.sleep(0)
             self.age += 1
             print(f"\n\nName: {self.name} || Gender: {self.gender}\nWorking: {self.isWorking}   ||   Balance: {self.balance}$\nStudying: {self.isStudying}   ||   Grades: {self.grades}\nResting: {self.isResting}   ||   Happiness: {self.happy}%\nAlive: {self.isAlive}   ||   Age: {self.age}\n\n")
         
@@ -189,3 +189,31 @@ while True:
         break
     except:
         print("\n\nSomething went wrong... Please, try again\n\n")
+
+exitTryNumber = 0
+
+while exitTryNumber < 2:
+    isExit = str(input("Type \"EXIT\" to exit the program: "))
+
+    if isExit.lower() == "exit":
+        exit()
+
+    elif not isExit.lower() == "exit":
+        print("\n\nThat is not \"EXIT\"\n")
+        isStay = str(input("\nType \"STAY\" to avoid exiting the program: "))
+        if isStay.lower() == "stay":
+            print("\nProgram will not be exited.\n")
+        elif not isStay.lower() == "stay":
+            print("\n\nThat is not \"STAY\"\n\n")
+        else:
+            print("ERROR on line 209")
+
+    else:
+        print("ERROR on line 212")
+
+    exitTryNumber += 1
+print("You tried to exit too many times.\nYou will exit in")
+for i in range(10):
+    print(10-i)
+    tm.sleep(1)
+exit()
