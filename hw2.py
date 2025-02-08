@@ -1,3 +1,4 @@
+# Made by Elkhan
 import time as tm
 
 print("By DPro7\n\nHi!\nThis is an accurate prediction of your life based on your current stats.\n\nHave fun!\n\n\n")
