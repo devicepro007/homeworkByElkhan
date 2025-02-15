@@ -94,7 +94,7 @@ class Character:
             if self.happy > 100:
                 self.happy = 100
             
-            tm.sleep(0)
+            tm.sleep(1)
             self.age += 1
             print(f"\n\nName: {self.name} || Gender: {self.gender}\nWorking: {self.isWorking}   ||   Balance: {self.balance}$\nStudying: {self.isStudying}   ||   Grades: {self.grades}\nResting: {self.isResting}   ||   Happiness: {self.happy}%\nAlive: {self.isAlive}   ||   Age: {self.age}\n\n")
         
